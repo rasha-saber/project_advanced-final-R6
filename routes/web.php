@@ -52,7 +52,7 @@ Route::delete('/topics/{id}/forcedelete', [topicsController::class, 'forceDelete
 // });
 
 //->middleware('verified');
-Route::get('/categories', [categoryController::class, 'index'])->name('categories.index')->middleware('verified');
+Route::get('/categories', [categoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/create', [categoryController::class, 'create'])->name('categories.create');
 Route::post('/categories', [categoryController::class, 'store'])->name('categories.store');
 Route::get('/categories/{id}', [categoryController::class, 'show'])->name('categories.show');

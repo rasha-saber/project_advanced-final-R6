@@ -20,8 +20,9 @@ return new class extends Migration
             $table->boolean('published')->default(false);
             $table->boolean('trending')->default(false); 
             $table->string('image')->nullable();
-            $table->foreignId('category_id')->constrained('categories');
-            // $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            
             $table->softDeletes();
             $table->timestamps();
         });

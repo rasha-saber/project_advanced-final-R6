@@ -16,6 +16,8 @@
         @yield('contentindex')
         @yield('listing')
         @yield('test')
+        
+  @yield('error')
                 </main>
 
     </main>

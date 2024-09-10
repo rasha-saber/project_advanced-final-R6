@@ -22,8 +22,8 @@
                 <div class="dropdown-header text-center">
                   <img class="img-md rounded-circle" src="{{asset('assests/images/avatar-default.svg')}}" alt="Profile image"
                     width="80" height="80" />
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>
+                  <p class="fw-light text-muted mb-0">{{ Auth::user()->email }}</p>
                 </div>
                 <a class="dropdown-item" href="#">My Profile</a>
                 <a class="dropdown-item" href="#">Sign Out</a>
