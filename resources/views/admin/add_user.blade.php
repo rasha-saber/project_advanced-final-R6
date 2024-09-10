@@ -50,15 +50,33 @@
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Password:</label>
           <div class="col-md-10">
             <input type="password" placeholder="Password" class="form-control py-2" name="password"/>
+   @error('password')
+              <div class="alert alert-warning">{{$message}}</div>
+              @enderror
           </div>
         </div>
         <div class="form-group mb-3 row">
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Confirm Password:</label>
           <div class="col-md-10">
             <input type="password" placeholder="Confirm Password" class="form-control py-2"  name="password_confirmation"/>
-            @error('password')
+            @error('password_confirmation')
               <div class="alert alert-warning">{{$message}}</div>
               @enderror
+          </div>
+        </div>
+        {{-- <div>
+        <label for="active">Active</label>
+        <select id="active" name="active" required>
+            <option value="1" {{ old('active', 1) == 1 ? 'selected' : '' }}>Active</option>
+            <option value="0" {{ old('active', 1) == 0 ? 'selected' : '' }}>Inactive</option>
+        </select>
+    </div> --}}
+
+            <div class="form-group mb-3 row">
+          <label for="" class="form-label col-md-2 fw-bold text-md-end">Active:</label>
+          <div class="col-md-10">
+            <input type="checkbox" class="form-check-input" style="padding: 0.7rem;" name="active"  value="1" {{ old('active', 1) == 1 ? 'selected' : '' }}value="0" {{ old('active', 1) == 0 ? 'selected' : '' }} />
+          
           </div>
         </div>
         <div class="text-md-end">
@@ -70,10 +88,10 @@
     </div>
   </div>
   </main>
-  <script src="assests/js/jquery.min.js"></script>
-  <script src="assests/js/bootstrap.bundle.min.js"></script>
-  <script src="assests/js/dataTables.min.js"></script>
-  <script src="assests/js/tables.js"></script>
+  <script src="{{asset('/js/jquery.min.js')}}"></script>
+  <script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('/js/dataTables.min.js')}}"></script>
+  <script src="{{asset('/js/tables.js')}}"></script>
 </body>
 
 </html>

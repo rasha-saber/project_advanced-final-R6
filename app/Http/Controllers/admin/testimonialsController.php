@@ -33,7 +33,7 @@ class testimonialsController extends Controller
     {
         $data = $request->validate([
             'name' => "required|string|max:255",
-            'content' => "required|string",
+            'content' => "required|string|max:1000",
             'image' => "required|file|mimes:jpg,gif,svg,jpeg,png|max:2048",
         ]);
         $data['published'] = isset($request->published);
@@ -86,4 +86,14 @@ class testimonialsController extends Controller
         Testimonial::where('id', $id)->delete();
         return redirect()->route('testimonials.index');
     }
+
+
+    public function testimonial()
+    {
+        $testimonial = Testimonial::where('published', 1)
+        ->orderBy('updated_at', 'DESC')
+        ->get();
+        return view('testimonial', compact('testimonial'));
+        }
+
 }

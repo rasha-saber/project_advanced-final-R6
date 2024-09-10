@@ -38,7 +38,10 @@ class LoginController extends Controller
         $this->middleware('auth')->only('logout');
     }
 
-
+    protected function credentials(Request $request)
+    {
+        return $request->only($this->username(), 'password');
+    }
 //     protected function credentials(Request $request)
 // {
 //     return ['username' => $request->input('username'), 'password' => $request->input('password')];

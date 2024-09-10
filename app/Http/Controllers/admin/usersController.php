@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Auth\Events\Registered;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+// use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
 
 class usersController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
+        $user = Auth::user();
         $users = User::get();
-         return view('admin.users', compact('users'));
+        return view('admin.users', compact('users'));
     }
 
     /**
@@ -31,21 +37,34 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
-        
         $data = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'username' => 'required|string|max:255|unique:users,username,',
-           'email' => 'required|string|email|max:255|unique:users,email,',
-            'password' => 'nullable|confirmed|min:8',
-       
-            // 'email_verified_at' => 'required|string|email|max:255|unique:users',
-            // 'password' => 'sometimes|nullable|string|min:8|confirmed',
+            'username' => 'required|string|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+            // 'active' => 'boolean',
         ]);
-        $data['password'] = Hash::make($request['password']);
-        User::create($data);
+        $user =  User::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'username' => $data['username'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'active' => $request->has('active') ? 1 : 0,
+            'email_verified_at' => Carbon::now(),
+        ]);
+
+        event(new Registered($user));
+
         return redirect()->route('users.index');
     }
+
+
+
+
+
+
 
     /**
      * Display the specified resource.
@@ -55,71 +74,64 @@ class usersController extends Controller
         //
     }
 
+
+
+
+
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
         $user = User::findOrFail($id);
-          return view('admin.edit_user', compact('user'));
+        return view('admin.edit_user', compact('user'));
     }
+
+
+
+
+
 
     /**
      * Update the specified resource in storage.
      */
-    // public function update(Request $request, $id)
-    // {
-    //     $data = $request->validate([
-    //         'first_name' => 'required|string|max:255',
-    //         'last_name' => 'required|string|max:255',
-    //         'username' => 'required|string|max:255|unique:users,username,'. $id,
-    //        'email' => 'required|string|email|max:255|unique:users,email,'. $id,
-    //         'email_verified_at' => 'required|string|email|max:255|unique:users',
-    //         'password' => 'nullable|confirmed|min:8',
-    //         'active' => 'nullable|boolean',
-    //     ]);
-    //     $user = User::findOrFail($id);
-    //     // $data['active'] = isset($request->active);
-    //     if ($request->filled('password')) {
-    //         $user->password = Hash::make($request->input('password'));
-    //     }
-    //     $user->active = $request->has('active') ? true : false;
-    //     $user->save();
-    //     // if (isset($data['password'])) {
-    //     //     $data['password'] = Hash::make($data['password']);
-    //     // } else {unset($data['password']);}
-    //     User::where('id', $id)->update($data);
-    //     return redirect()->route('users.index');
-
-
-    // }
-
     public function update(Request $request, $id)
     {
         $data =    $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'username' => 'required|string|max:255' . $id,
+            'email' => 'required|email|max:255' . $id,
             'password' => 'nullable|confirmed|min:8',
+            'active' => 'boolean'
         ]);
-    
+
         $user = User::findOrFail($id);
-        $user->first_name = $request->input('first_name');
-        $user->last_name = $request->input('last_name');
-        $user->username = $request->input('username');
-        $user->email = $request->input('email');
-        
+        $user->update([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'username' => $data['username'],
+            'email' => $data['email'],
+            'active' => $request->has('active') ? 1 : 0,
+            'password' => $data['password'] ? bcrypt($data['password']) : $user->password,
+            'email_verified_at' => $user->email_verified_at ?: Carbon::now(),
+        ]);
         // if ($request->filled('password')) {
         //     $user->password = bcrypt($request->input('password'));
         // }
-     if (isset($data['password'])) {
-             $data['password'] = Hash::make($data['password']);
-         } else {unset($data['password']);}
+        $user->active = $request->has('active') ? true : false;
+        if (isset($data['password'])) {
+            $data['password'] = Hash::make($data['password']);
+        } else {
+            unset($data['password']);
+        }
         $user->save();
-    
+
         return redirect()->route('users.index')->with('success', 'User updated successfully.');
     }
+
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -129,4 +141,17 @@ class usersController extends Controller
         User::where('id', $id)->delete();
         return redirect()->route('users.index');
     }
+
+
+    // public function dashboard()
+    // {
+
+    //     if (Auth::check()) {
+    //         $users = Auth::user();
+    //         return view('admin.users', compact('users'));
+    //     } else {
+
+    //         return redirect()->route('login');
+    //     }
+    // }
 }

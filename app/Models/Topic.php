@@ -11,11 +11,11 @@ class Topic extends Model
 
     use HasFactory, softDeletes;
     protected $fillable = [
-    'category_id', 'image', 'trending', 'published', 'content', 'title', 
+    'category_id', 'image', 'trending', 'published', 'content', 'title', 'views',
     ];
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id' );
     }
 }

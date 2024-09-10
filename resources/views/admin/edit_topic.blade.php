@@ -51,7 +51,7 @@
         <div class="form-group mb-3 row">
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Trending:</label>
           <div class="col-md-10">
-            <input type="checkbox" class="form-check-input" style="padding: 0.7rem;" checked name="trending" {{ old('trending', $topic->trending) ? 'checked' : '' }} />
+            <input type="checkbox" class="form-check-input" style="padding: 0.7rem;"  name="trending" {{ old('trending', $topic->trending) ? 'checked' : '' }} />
           </div>
         </div>
 
@@ -78,7 +78,7 @@
           <div class="form-group mb-3 row">
             <label for="" class="form-label col-md-2 fw-bold text-md-end">Car image:</label>
             <div class="col-md-10">
-              <input type="file" class="form-control py-2" name="image" value="{{old('image')}}" />
+              <input type="file" class="form-control py-2" name="image" />
 
               @error('image')
               <div class="alert alert-warning">{{$message}}</div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('index') }}">
                     <i class="bi-back"></i>
                     <span>Topic</span>
                 </a>
@@ -17,7 +17,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            <a class="nav-link click-scroll" href="{{ route('index') }}">Home</a>
                         </li>
 
                         <li class="nav-item">
@@ -46,17 +46,17 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                                <li><a class="dropdown-item" href="testimonials.html">Our Client Says</a></li>
-                                <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
-                                <li><a class="dropdown-item" href="topics-detail.html">Topics details</a></li>
-                                <li><a class="dropdown-item" href="404.html">404 page</a></li>
+                                <li><a class="dropdown-item" href="{{ route('contact') }}">Contact Us</a></li>
+                                <li><a class="dropdown-item" href="{{ route('testimonial') }}">Our Client Says</a></li>
+                                <li><a class="dropdown-item" href="{{ route('topiclist') }}">Topics Listing</a></li>
+                                {{-- <li><a class="dropdown-item" href="{{ route('topicdetail',['id']) }}">Topics details</a></li>
+                                <li><a class="dropdown-item" href="{{ route('error') }}">404 page</a></li> --}}
                             </ul>
                         </li>
                     </ul>
 
                     <div class="d-none d-lg-block">
-                        <a href="../admin/register.html" class="navbar-icon bi-person smoothscroll"></a>
+                        <a href="{{ route('home') }}" class="navbar-icon bi-person smoothscroll"></a>
                     </div>
                 </div>
             </div>

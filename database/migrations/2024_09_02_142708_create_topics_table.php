@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('content');
-            // $table->boolean('is_published')->default(false);
+            $table->integer('views')->default(0);
+            $table->integer('badge_count')->default(0);
             $table->boolean('published')->default(false);
-            // $table->timestamp('published_at')->nullable();
             $table->boolean('trending')->default(false); 
             $table->string('image')->nullable();
             $table->foreignId('category_id')->constrained('categories');

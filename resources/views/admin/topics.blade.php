@@ -27,6 +27,7 @@
               <th scope="col">Category</th>
               <th scope="col">Content</th>
               <th scope="col">Published</th>
+              <th scope="col">No. of views</th>
               <th scope="col">Trending</th>
               <th scope="col">Edit</th>
               <th scope="col">Delete</th>
@@ -40,9 +41,9 @@
               </td>
 
               <td>{{$topic['category']['category_name']}}</td>
-              <td>{{ Str::limit($topic['content'], 30,'....')}}</td>
+              <td>{{ Str::limit($topic['content'], 15,'....')}}</td>
               <td>@if($topic['published']=== 1) YES @else NO @endif</td>
-              
+              <td>{{$topic->views}}</td>
               <td>@if($topic['trending']=== 1) YES @else NO @endif</td>
               </td>
 

@@ -19,7 +19,7 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $fillable = [
         
        
-           'first_name', 'last_name', 'username', 'email', 'password',  'active',
+           'first_name', 'last_name', 'username', 'email', 'password',  'active', 'email_verified_at',
     ];
 
     /**
@@ -42,7 +42,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-           
+           'active' => 'boolean',
         ];
     }
 }

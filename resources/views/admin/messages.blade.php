@@ -26,7 +26,17 @@
           @foreach($unreadmessages as $message)
           <tr>
             <th scope="row">{{ $message->created_at->format('d M Y')}}</th>
+            
             <td><a href="{{route('messages.show', $message['id']) }}" class="text-decoration-none text-dark">{{ Str::limit($message['subject'], 30,'....') }}</a></td>
+    {{-- <td>
+  @if($message['subject'])
+    <a href="{{ route('messages.show', $message['id']) }}" class="text-decoration-none text-dark">
+      {{ Str::limit($message['subject'], 30, '....') }}
+    </a>
+  @else
+    <span class="text-muted">No subject</span>
+  @endif
+</td> --}}
             <td>{{ $message->sender_name }}</td>
             <td class="text-center">
               <form action="{{route('messages.destroy', $message['id'])}}" method="POST">

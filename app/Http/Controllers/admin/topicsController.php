@@ -38,15 +38,14 @@ class topicsController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'image' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'trending' => 'nullable|boolean',
-            // 'is_published' => 'nullable|boolean',
-            // 'published_at' => 'nullable|date',
+
             'category_id' => 'required|exists:categories,id',
         ]);
         $data['published'] = isset($request->published);
         $data['trending'] = isset($request->trending);
-        // if ($request->is_published && !$request->published_at) {
-        //     $data['published_at'] = now();
+        $data['views'] = 0;
+        $data['badge_count'] = 0;
+        
         // }
 
         $data['image'] = $this->uploadFile($request->image, 'assests/images/topics/');
@@ -65,9 +64,16 @@ class topicsController extends Controller
 
         // $topic = Topic::findOrFail($id);
         // $category = $topic->Category;
-        // return view('admin.topic-details', compact('topic', 'category'));
+        return view('admin.topic-details', compact('topic', 'category'));
     }
 
+    public function showCategoryTopics($id)
+    {
+        $category = Category::find($id);
+        $topics = $category->topics;
+
+        return view('category.topics', compact('category', 'topics'));
+    }
     /**
      * Show the form for editing the specified resource.
      */
@@ -87,17 +93,11 @@ class topicsController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'image' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'trending' => 'nullable|boolean',
-            // 'is_published' => 'nullable|boolean',
-            // 'published_at' => 'nullable|date',
             'category_id' => 'required|exists:categories,id',
         ]);
         $data['published'] = isset($request->published);
         $data['trending'] = isset($request->trending);
-        // if ($request->is_published && !$request->published_at) {
-        //     $data['published_at'] = now();
-        // }
-
+        $data['views'] = 0;
 
         if ($request->hasFile('image')) {
             $data['image'] = $this->uploadFile($request->file('image'), 'assests/images/topics/');
@@ -116,31 +116,4 @@ class topicsController extends Controller
         Topic::where('id', $id)->delete();
         return redirect()->route('topics.index');
     }
-
-
-    // public function showDeleted()
-    // {
-
-    //     $topics = Topic::onlyTrashed()->get();
-    //     return view('trashedtopics', compact('topics'));
-
-
-    // }
-
-    // public function restore(string $id)
-    // {
-
-    //     Topic::where('id', $id)->restore();
-
-
-    //     return redirect()->route('topics.showDeleted');
-    // }
-
-    // public function forceDelete(Request $request, string $id)
-    // {
-
-    //     Topic::where('id', $id)->forceDelete();
-    //     return redirect()->route('topics.index');
-    // }
-
 }

@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class messagesController extends Controller
+
+
+class MessagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,15 +46,11 @@ class messagesController extends Controller
 
         ]);
     //     $data  ['is_read'] = false;
-    //   Message::create($data);
-        Message::create([
-            'sender_name' =>  $data ['sender_name'],
-            'sender_email' => $data ['sender_email'],
-            'subject' => $data ['subject'] ?? null,
-            'body' => $data ['body'],
-            // 'is_read' => false,
-        ]);
-        return redirect()->route('messages.index');
+    $message =  Message::create($data);
+      
+        Mail::to('rashasaer199@gmail.com')->send(new ContactMail($data));
+    return back()->with('success', 'your message has been sent successfully');
+        // return redirect()->route('messages.index');
     }
 
     /**
@@ -61,6 +60,7 @@ class messagesController extends Controller
     {
         $message = Message::findOrFail($id);
         $message->update(['is_read' => true]);
+        $message->save();
         return view('admin.message_details', compact('message'));
     }
 

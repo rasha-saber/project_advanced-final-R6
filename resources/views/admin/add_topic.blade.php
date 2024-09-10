@@ -24,6 +24,7 @@
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Category:</label>
           <div class="col-md-10">
             <select name="category_id" id="category_id" class="form-control py-1">
+            <option value="">{{__('topics.SelectCategory')}}</option>
             @foreach($categories as $category)
             <option value="{{$category->id}}" @selected(old('category_id', $topic->category_id ?? '') == $category->id)>{{$category->category_name}}</option>
             @endforeach
@@ -46,18 +47,14 @@
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Trending:</label>
           <div class="col-md-10">
             <input type="checkbox" class="form-check-input" style="padding: 0.7rem;" name="trending" value="1" {{ old('trending') ? 'checked' : '' }} />
-            @error('trending')
-               <div class="alert alert-warning">{{$message}}</div>
-               @enderror
+
           </div>
         </div>
         <div class="form-group mb-3 row">
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Published:</label>
           <div class="col-md-10">
             <input type="checkbox" class="form-check-input" style="padding: 0.7rem;" name="published" {{ old('published') ? 'checked' : '' }} />
-            @error('published')
-               <div class="alert alert-warning">{{$message}}</div>
-               @enderror
+          
           </div>
         </div>
         <hr>
@@ -65,9 +62,12 @@
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Image:</label>
           <div class="col-md-10">
             <input type="file" class="form-control" style="padding: 0.7rem;" name="image" />
-
-             </div>
-           </div>
+{{-- 
+             @error('image')
+              <div class="alert alert-warning">{{$message}}</div>
+              @enderror --}}
+            </div>
+          </div>
         <div class="text-md-end">
           <button class="btn mt-4 btn-secondary text-white fs-5 fw-bold border-0 py-2 px-md-5">
             Add Topic

@@ -32,7 +32,7 @@ class categoryController extends Controller
     {
         $data = $request->validate([
             'category_name' => 'required|string|max:255',
-            // 'description' => 'required|string|max:1000',
+           
         ]);
         Category::create($data);
         return redirect()->route('categories.index')->with('success', 'Category created successfully.');
@@ -43,9 +43,7 @@ class categoryController extends Controller
      */
     // public function show(string $id)
     // {
-    //    $category = Category::findOrFail($id);
-    // $topics = $category->topics;
-    //     return view('admin.category-details', compact('category', 'topics' ));
+    
   
     // }
     /**

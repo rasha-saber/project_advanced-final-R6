@@ -54,7 +54,7 @@
               @enderror
           </div>
         </div>
-        <div class="form-group mb-3 row">
+        {{-- <div class="form-group mb-3 row">
           <label for="" class="form-label col-md-2 fw-bold text-md-end">Password:</label>
           <div class="col-md-10">
             <input type="password" placeholder="Password" class="form-control py-2" name="password" />
@@ -62,6 +62,25 @@
     <input type="password" name="password_confirmation" placeholder="Confirm Password" class="form-control"  >
 </div>
             @error('password')
+              <div class="alert alert-warning">{{$message}}</div>
+              @enderror
+          </div>
+        </div> --}}
+
+                <div class="form-group mb-3 row">
+          <label for="" class="form-label col-md-2 fw-bold text-md-end">Password:</label>
+          <div class="col-md-10">
+            <input type="password" placeholder="Password" class="form-control py-2" name="password"/>
+   @error('password')
+              <div class="alert alert-warning">{{$message}}</div>
+              @enderror
+          </div>
+        </div>
+        <div class="form-group mb-3 row">
+          <label for="" class="form-label col-md-2 fw-bold text-md-end">Confirm Password:</label>
+          <div class="col-md-10">
+            <input type="password" placeholder="Confirm Password" class="form-control py-2"  name="password_confirmation"/>
+            @error('password_confirmation')
               <div class="alert alert-warning">{{$message}}</div>
               @enderror
           </div>
