@@ -97,15 +97,16 @@ class usersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data =    $request->validate([
+
+        $data = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'username' => 'required|string|max:255' . $id,
-            'email' => 'required|email|max:255' . $id,
+            'username' => 'required|string|max:255|unique:users,username,' . $id,
+            'email' => 'required|email|max:255|unique:users,email,' . $id,
             'password' => 'nullable|confirmed|min:8',
-            'active' => 'boolean'
+            // 'active' => 'boolean'
         ]);
-
+    
         $user = User::findOrFail($id);
         $user->update([
             'first_name' => $data['first_name'],
@@ -116,18 +117,22 @@ class usersController extends Controller
             'password' => $data['password'] ? bcrypt($data['password']) : $user->password,
             'email_verified_at' => $user->email_verified_at ?: Carbon::now(),
         ]);
+    
+        return redirect()->route('users.index');
+
         // if ($request->filled('password')) {
         //     $user->password = bcrypt($request->input('password'));
         // }
-        $user->active = $request->has('active') ? true : false;
-        if (isset($data['password'])) {
-            $data['password'] = Hash::make($data['password']);
-        } else {
-            unset($data['password']);
-        }
-        $user->save();
+        // $user->active = $request->has('active') ? true : false;
+        // $user-> active = $request->has('active') ? 1 : 0 ;
+        // if (isset($data['password'])) {
+        //     $data['password'] = Hash::make($data['password']);
+        // } else {
+        //     unset($data['password']);
+        // }
+        // $user->save();
 
-        return redirect()->route('users.index')->with('success', 'User updated successfully.');
+        // return redirect()->route('users.index')->with('success', 'User updated successfully.');
     }
 
 
