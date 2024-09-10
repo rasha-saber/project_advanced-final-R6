@@ -19,7 +19,7 @@ class usersController extends Controller
 
     public function index()
     {
-        $user = Auth::user();
+        // $user = Auth::user();
         $users = User::get();
         return view('admin.users', compact('users'));
     }

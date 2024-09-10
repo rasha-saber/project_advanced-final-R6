@@ -14,10 +14,8 @@
           <div class="mx-auto " style="max-width: 1225px">
             <article class="mx-md-4 ">
               <h2 class="fs-1 py-4">{{ $message->subject }}</h2>
-              <p class="fw-bold"><small>From: {{ $message->sender_name }}, {{ $message->sender_email }}</small></p>
-              <p>
-                {{ $message->body }}
-              </p>
+              <p class="fw-bold"><small>From: {{ $message->sender_name }} {{ $message->sender_email }}</small></p>
+              <p> {{ $message->body }}</p>
               <div class="text-md-end">
                 <a class="btn mt-4 btn-secondary text-white fs-5 fw-bold border-0 py-2 px-md-5" href="{{route('messages.index') }}">
                   Back to All Messaages
@@ -28,10 +26,10 @@
         </div>
       </div>
     </div>
-    <script src="assests/js/jquery.min.js"></script>
-    <script src="assests/js/bootstrap.bundle.min.js"></script>
-    <script src="assests/js/dataTables.min.js"></script>
-    <script src="assests/js/tables.js"></script>
+    <script src="{{(asset('assests/js/jquery.min.js'))}}"></script>
+    <script src="{{(asset('assests/js/bootstrap.bundle.min.js'))}}"></script>
+    <script src="{{(asset('assests/js/dataTables.min.js'))}}"></script>
+    <script src="{{(asset('assests/js/tables.js'))}}"></script>
 </body>
 
 </html>
