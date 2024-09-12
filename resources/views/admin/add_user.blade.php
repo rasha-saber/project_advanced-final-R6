@@ -88,10 +88,4 @@
     </div>
   </div>
   </main>
-  <script src="{{asset('/js/jquery.min.js')}}"></script>
-  <script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('/js/dataTables.min.js')}}"></script>
-  <script src="{{asset('/js/tables.js')}}"></script>
-</body>
-
-</html>
+  @include('admin.incluodes.js')

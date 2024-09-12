@@ -18,7 +18,7 @@
                       class="img-wrapper"
                     >
                       <img
-                        src="{{(asset('assests/images/topics/colleagues-working-cozy-office-medium-shot.png'))}}"
+                        src="{{(asset('assests/images/topics/' .$topic->image))}}"
                         class="rounded image-center border-5 rounded-4"
                         alt="DEI-header-img"
                       />
@@ -40,10 +40,4 @@
               </div>
         </div>
     </div>
-    <script src="{{(asset('assests/js/jquery.min.js'))}}"></script>
-    <script src="{{(asset('assests/js/bootstrap.bundle.min.js'))}}"></script>
-    <script src="{{(asset('assests/js/dataTables.min.js'))}}"></script>
-    <script src="{{(asset('assests/js/tables.js'))}}"></script>
-</body>
-
-</html>
+    @include('admin.incluodes.js')
