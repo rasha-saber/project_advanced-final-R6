@@ -36,60 +36,67 @@ Route::post('/topics/{id}/save', [PublicController::class, 'saveTopic'])->name('
 
 
 
-//  Route::prefix('topics')->middleware('verified')->group(function(){
-// ->middleware('verified');
+ Route::prefix('topics')->middleware('verified')->group(function(){
+Route::get('/', [topicsController::class, 'index'])->name('topics.index');
+Route::get('/create', [topicsController::class, 'create'])->name('topics.create');
+Route::post('/', [topicsController::class, 'store'])->name('topics.store');
+Route::get('//{id}', [topicsController::class, 'show'])->name('topics.show');
+Route::get('/{id}/edit', [topicsController::class, 'edit'])->name('topics.edit');
+Route::put('/{id}', [topicsController::class, 'update'])->name('topics.update');
+Route::delete('/{id}', [topicsController::class, 'destroy'])->name('topics.destroy');
+// Route::patch('/{id}/restore', [topicsController::class, 'restore'])->name('topics.restore');
+// Route::delete('/{id}/forcedelete', [topicsController::class, 'forceDelete'])->name('topics.forcedelete');
+});
 
-Route::get('/topics', [topicsController::class, 'index'])->name('topics.index')->middleware('verified');
-Route::get('/topics/create', [topicsController::class, 'create'])->name('topics.create');
-Route::post('/topics', [topicsController::class, 'store'])->name('topics.store');
-Route::get('/topics/{id}', [topicsController::class, 'show'])->name('topics.show');
-Route::get('/topics/{id}/edit', [topicsController::class, 'edit'])->name('topics.edit');
-Route::put('/topics/{id}', [topicsController::class, 'update'])->name('topics.update');
-Route::delete('/topics/{id}', [topicsController::class, 'destroy'])->name('topics.destroy');
-Route::patch('/topics/{id}/restore', [topicsController::class, 'restore'])->name('topics.restore');
-Route::delete('/topics/{id}/forcedelete', [topicsController::class, 'forceDelete'])->name('topics.forcedelete');
 
-// });
 
+
+
+
+Route::prefix('categories')->middleware('verified')->group(function(){
 //->middleware('verified');
-Route::get('/categories', [categoryController::class, 'index'])->name('categories.index');
-Route::get('/categories/create', [categoryController::class, 'create'])->name('categories.create');
-Route::post('/categories', [categoryController::class, 'store'])->name('categories.store');
-Route::get('/categories/{id}', [categoryController::class, 'show'])->name('categories.show');
-Route::get('/categories/{id}/edit', [categoryController::class, 'edit'])->name('categories.edit');
-Route::put('/categories/{id}', [categoryController::class, 'update'])->name('categories.update');
-Route::delete('/categories/{id}', [categoryController::class, 'destroy'])->name('categories.destroy');
+Route::get('/', [categoryController::class, 'index'])->name('categories.index')->middleware('verified');
+Route::get('/create', [categoryController::class, 'create'])->name('categories.create')->middleware('verified');
+Route::post('/', [categoryController::class, 'store'])->name('categories.store')->middleware('verified');
+Route::get('/{id}', [categoryController::class, 'show'])->name('categories.show')->middleware('verified');
+Route::get('/{id}/edit', [categoryController::class, 'edit'])->name('categories.edit')->middleware('verified');
+Route::put('/{id}', [categoryController::class, 'update'])->name('categories.update')->middleware('verified');
+Route::delete('/{id}', [categoryController::class, 'destroy'])->name('categories.destroy')->middleware('verified');
+});
 
 
 
-
-Route::get('/testimonials', [testimonialsController::class, 'index'])->name('testimonials.index');
-Route::get('/testimonials/create', [testimonialsController::class, 'create'])->name('testimonials.create');
-Route::post('/testimonials', [testimonialsController::class, 'store'])->name('testimonials.store');
-Route::get('/testimonials/{id}', [testimonialsController::class, 'show'])->name('testimonials.show');
-Route::get('/testimonials/{id}/edit', [testimonialsController::class, 'edit'])->name('testimonials.edit');
-Route::put('/testimonials/{id}', [testimonialsController::class, 'update'])->name('testimonials.update');
-Route::delete('/testimonials/{id}', [testimonialsController::class, 'destroy'])->name('testimonials.destroy');
-Route::patch('/testimonials/{id}/restore', [testimonialsController::class, 'restore'])->name('testimonials.restore');
-Route::delete('/testimonials/{id}/forcedelete', [testimonialsController::class, 'forceDelete'])->name('testimonials.forcedelete');
-
-
-
-
-Route::get('/messages', [MessagesController::class, 'index'])->name('messages.index');
-Route::post('/messages', [MessagesController::class, 'store'])->name('messages.store');
-Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('messages.show');
-Route::delete('/messages/{id}', [MessagesController::class, 'destroy'])->name('messages.destroy');
+Route::prefix('testimonials')->middleware('verified')->group(function(){
+Route::get('/', [testimonialsController::class, 'index'])->name('testimonials.index')->middleware('verified');
+Route::get('/create', [testimonialsController::class, 'create'])->name('testimonials.create')->middleware('verified');
+Route::post('/', [testimonialsController::class, 'store'])->name('testimonials.store')->middleware('verified');
+Route::get('/{id}', [testimonialsController::class, 'show'])->name('testimonials.show')->middleware('verified');
+Route::get('/{id}/edit', [testimonialsController::class, 'edit'])->name('testimonials.edit')->middleware('verified');
+Route::put('/{id}', [testimonialsController::class, 'update'])->name('testimonials.update')->middleware('verified');
+Route::delete('/{id}', [testimonialsController::class, 'destroy'])->name('testimonials.destroy')->middleware('verified');
+// Route::patch('/{id}/restore', [testimonialsController::class, 'restore'])->name('testimonials.restore')->middleware('verified');
+// Route::delete('/{id}/forcedelete', [testimonialsController::class, 'forceDelete'])->name('testimonials.forcedelete')->middleware('verified');
+});
 
 
 
+Route::prefix('messages')->middleware('verified')->group(function(){
+Route::get('/', [MessagesController::class, 'index'])->name('messages.index')->middleware('verified');
+Route::post('/', [MessagesController::class, 'store'])->name('messages.store')->middleware('verified');
+Route::get('/{id}', [MessagesController::class, 'show'])->name('messages.show')->middleware('verified');
+Route::delete('/{id}', [MessagesController::class, 'destroy'])->name('messages.destroy')->middleware('verified');
+});
 
-Route::get('/users', [usersController::class, 'index'])->name('users.index');
-Route::get('/users/create', [usersController::class, 'create'])->name('users.create');
-Route::post('/users', [usersController::class, 'store'])->name('users.store');
-Route::get('/users/{id}/edit', [usersController::class, 'edit'])->name('users.edit');
-Route::put('/users/{id}', [usersController::class, 'update'])->name('users.update');
-Route::delete('/users/{id}', [topicsController::class, 'destroy'])->name('users.destroy');
+
+
+Route::prefix('users')->middleware('verified')->group(function(){
+Route::get('/', [usersController::class, 'index'])->name('users.index')->middleware('verified');
+Route::get('/create', [usersController::class, 'create'])->name('users.create')->middleware('verified');
+Route::post('/', [usersController::class, 'store'])->name('users.store')->middleware('verified');
+Route::get('/{id}/edit', [usersController::class, 'edit'])->name('users.edit')->middleware('verified');
+Route::put('/{id}', [usersController::class, 'update'])->name('users.update')->middleware('verified');
+Route::delete('/{id}', [topicsController::class, 'destroy'])->name('users.destroy')->middleware('verified');
+});
 
 
 

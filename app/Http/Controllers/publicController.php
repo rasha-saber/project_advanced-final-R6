@@ -84,13 +84,13 @@ class publicController extends Controller
     }
 
 
-    public function saveTopic($id)
-    {
-        $topic = Topic::findOrFail($id);
-        $topic->views += 1;
-        $topic->save();
-        return redirect()->route('topicdetail', $id);
-    }
+    // public function saveTopic($id)
+    // {
+    //     $topic = Topic::findOrFail($id);
+    //     $topic->views += 1;
+    //     $topic->save();
+    //     return redirect()->route('topicdetail', $id);
+    // }
 
 
     public function topiclist()
