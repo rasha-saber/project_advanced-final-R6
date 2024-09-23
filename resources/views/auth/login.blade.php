@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-5 bg-white rounded-3">
+{{-- <div class="container my-5 bg-white rounded-3"> --}}
     <div class="row">
         <div class="col-md-5 d-none d-md-block img-wrapper">
             <img src="{{ asset('assests/images/rear-view-young-college-student.jpg') }}" alt="">
