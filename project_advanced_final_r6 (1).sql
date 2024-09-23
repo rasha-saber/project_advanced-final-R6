@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2024 at 04:33 PM
+-- Generation Time: Sep 23, 2024 at 06:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.3.9
 
@@ -38,10 +38,10 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('902ba3cda1883801594b6e1b452790cc53948fda', 'i:1;', 1725984713),
-('902ba3cda1883801594b6e1b452790cc53948fda:timer', 'i:1725984713;', 1725984713),
-('fe5dbbcea5ce7e2988b8c69bcfdfde8904aabc1f', 'i:1;', 1725984585),
-('fe5dbbcea5ce7e2988b8c69bcfdfde8904aabc1f:timer', 'i:1725984585;', 1725984585);
+('0ade7c2cf97f75d009975f4d720d1fa6c19f4897', 'i:1;', 1725996602),
+('0ade7c2cf97f75d009975f4d720d1fa6c19f4897:timer', 'i:1725996602;', 1725996602),
+('rashsaber19@gmail.com|127.0.0.1', 'i:1;', 1727071406),
+('rashsaber19@gmail.com|127.0.0.1:timer', 'i:1727071405;', 1727071406);
 
 -- --------------------------------------------------------
 
@@ -73,9 +73,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
-(3, 'Miss Keara Towne DDS', '2024-09-10 09:50:03', '2024-09-10 09:50:03'),
-(4, 'Harold Bayer', '2024-09-10 09:50:03', '2024-09-10 09:50:03'),
-(5, 'Ms. Orpha Jones', '2024-09-10 09:50:03', '2024-09-10 09:50:03'),
+(4, 'jak 00000000000000000', '2024-09-10 09:50:03', '2024-09-17 18:03:54'),
 (6, 'Mrs. Lorena Blanda', '2024-09-10 09:50:03', '2024-09-10 09:50:03'),
 (7, 'Kristofer Breitenberg', '2024-09-10 09:50:03', '2024-09-10 09:50:03'),
 (8, 'Dr. Coleman Medhurst DVM', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
@@ -125,12 +123,14 @@ INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`) VAL
 (52, 'Crystal Hirthe', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (53, 'Mr. Matt McKenzie', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (54, 'Mustafa Williamson', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
-(55, 'Vern Auer', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (56, 'Christophe Volkman', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (57, 'Chauncey Abernathy', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (58, 'Fae Goyette', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
 (59, 'Mattie McGlynn', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
-(60, 'Tyreek Hoppe', '2024-09-10 09:50:42', '2024-09-10 09:50:42');
+(60, 'Tyreek Hoppe', '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
+(62, 'Mr. Francisco Ccccccccccccccassin', '2024-09-11 06:18:58', '2024-09-11 06:18:58'),
+(67, 'FGF', '2024-09-17 18:01:28', '2024-09-17 18:01:28'),
+(68, 'AEFHTGHJKLOO', '2024-09-20 10:05:16', '2024-09-20 10:43:41');
 
 -- --------------------------------------------------------
 
@@ -205,36 +205,35 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `sender_name`, `sender_email`, `subject`, `body`, `is_read`, `created_at`, `updated_at`) VALUES
-(1, 'Jayde McDermott', 'shanahan.angeline@hotmail.com', 'Dolore voluptate est qui veniam eaque ut.', 'Dignissimos eveniet ea tempore. Et provident rerum beatae corrupti iure quia. Iste quasi quae veritatis quis officia facilis debitis.', 'read', '2024-09-10 09:50:04', '2024-09-10 11:24:52'),
-(5, 'Rod Monahan', 'julia.swaniawski@gmail.com', 'Cum molestiae voluptatem autem aut.', 'Voluptate temporibus laborum aut saepe. Ipsum eius est pariatur libero illum dolores cum. Eveniet et rerum et eius consequatur vitae.', 'read', '2024-09-10 09:50:05', '2024-09-10 11:31:36'),
-(7, 'Anthony Cummings', 'emmerich.clark@strosin.com', 'Natus et quasi aut optio qui velit voluptatum.', 'Cum eveniet qui et ex corporis. Est consequatur nesciunt esse laboriosam ut distinctio quia. Reiciendis quasi eos iure dolores tenetur ipsum.', 'read', '2024-09-10 09:50:05', '2024-09-10 09:59:56'),
 (10, 'Mrs. Odie White DVM', 'shannon.wintheiser@koss.com', 'Aut vel aut et corporis a porro nihil.', 'Assumenda ut saepe sed ea consequatur amet consectetur. Consequatur corporis aut odio. Et et saepe nihil accusantium fugiat esse labore non.', 'read', '2024-09-10 09:50:05', '2024-09-10 12:01:42'),
 (11, 'Izaiah Schulist', 'brandi.grady@runolfsdottir.com', 'Labore cumque voluptatum reprehenderit ea rem voluptatem.', 'Illo sint tempora vero quidem maxime. Accusamus ut a autem voluptatem. Quos qui amet at atque ea animi dolorum.', 'read', '2024-09-10 09:50:23', '2024-09-10 12:40:50'),
 (13, 'Dr. Elinor Lueilwitz I', 'jairo52@hotmail.com', 'Vitae officiis distinctio et et ipsam optio quia.', 'Aut non rem et cum sint. Voluptatem quae voluptate facere dolor sequi aut libero cumque.', 'read', '2024-09-10 09:50:23', '2024-09-10 09:50:23'),
 (14, 'Marvin Wyman MD', 'nikolas24@gmail.com', 'Eos qui inventore placeat eveniet et.', 'Quis aut voluptatem est amet optio enim quaerat consequuntur. Porro earum aut unde ut nihil nihil dolor. Qui sit est repudiandae voluptatem qui. Voluptatem minus eaque sed quae est velit consequatur.', 'read', '2024-09-10 09:50:23', '2024-09-10 12:50:11'),
 (17, 'Angelita Stamm IV', 'mitchell08@fritsch.biz', 'Sit nam voluptas placeat suscipit quidem rem.', 'Similique quos in perspiciatis sapiente earum eos quis. Quia dignissimos saepe nihil est et aut iusto. Et placeat nobis corporis molestiae et. Eum ratione qui culpa.', 'read', '2024-09-10 09:50:23', '2024-09-10 09:50:23'),
 (19, 'Leonor Bechtelar Jr.', 'ryan.deanna@weimann.org', 'Quaerat expedita sequi deserunt fuga et id.', 'Aperiam praesentium mollitia laborum odio ut tempore optio. Qui est magni nostrum enim reiciendis quidem rem. Mollitia quas ut commodi perspiciatis exercitationem iusto.', 'read', '2024-09-10 09:50:23', '2024-09-10 09:50:23'),
-(21, 'Tristian Mraz', 'hackett.christine@hotmail.com', 'Optio neque vero reiciendis enim aut.', 'Ut alias nesciunt cupiditate. Error corporis voluptas officia quas dolor harum consequuntur. Quisquam ut laudantium dolorum totam nobis omnis totam. Minima quia eum doloribus illum qui praesentium.', 'unread', '2024-09-10 09:50:28', '2024-09-10 09:50:28'),
-(25, 'Novella Ondricka', 'hills.jaquelin@yahoo.com', 'Ab molestiae et illum et.', 'Laboriosam aspernatur commodi eveniet aut ratione eum. Eos nostrum sit occaecati et. Rem tenetur praesentium animi molestias. Vitae ipsum enim ipsa aut architecto.', 'read', '2024-09-10 09:50:28', '2024-09-10 09:50:28'),
+(21, 'Tristian Mraz', 'hackett.christine@hotmail.com', 'Optio neque vero reiciendis enim aut.', 'Ut alias nesciunt cupiditate. Error corporis voluptas officia quas dolor harum consequuntur. Quisquam ut laudantium dolorum totam nobis omnis totam. Minima quia eum doloribus illum qui praesentium.', 'read', '2024-09-10 09:50:28', '2024-09-10 17:20:23'),
 (26, 'Angel Dare MD', 'brown.claire@graham.info', 'Maxime dolorum sequi officia.', 'Incidunt assumenda neque adipisci sunt adipisci consequatur. Eum non sint provident ab delectus.', 'read', '2024-09-10 09:50:28', '2024-09-10 09:50:28'),
 (30, 'Chelsie Wunsch', 'jeremy.kunze@swaniawski.biz', 'Deserunt doloremque voluptatem quo in.', 'Quaerat est dolores repellendus. Sed omnis et et non. Possimus sed enim doloribus enim. Perferendis velit dolores aliquam facere culpa aliquid quisquam.', 'read', '2024-09-10 09:50:28', '2024-09-10 09:50:28'),
-(32, 'Kaci Stehr', 'katharina.ullrich@yahoo.com', 'Ut rerum laboriosam commodi.', 'Accusamus rerum quia et minima cumque laboriosam quo corrupti. Sit quis commodi esse illo voluptatibus. Neque expedita ut debitis suscipit.', 'read', '2024-09-10 09:50:33', '2024-09-10 09:50:33'),
-(33, 'Harvey Robel', 'ottilie.hane@yahoo.com', 'Optio omnis iusto voluptas.', 'Corrupti quia quod excepturi commodi maiores. Fugiat et eos quibusdam totam doloribus vel. Et nihil sunt debitis reprehenderit quis. Dolores sunt qui officiis velit.', 'unread', '2024-09-10 09:50:33', '2024-09-10 09:50:33'),
-(37, 'Tia Simonis', 'ywehner@wisoky.com', 'Est tenetur et quisquam quidem.', 'Iste veniam labore magni et architecto. Nobis dicta totam perferendis vel atque enim voluptatum. Distinctio cum et voluptas distinctio quia voluptas. Repellat porro qui dolores optio.', 'unread', '2024-09-10 09:50:33', '2024-09-10 09:50:33'),
+(32, 'Kaci Stehr', 'katharina.ullrich@yahoo.com', 'Ut rerum laboriosam commodi.', 'Accusamus rerum quia et minima cumque laboriosam quo corrupti. Sit quis commodi esse illo voluptatibus. Neque expedita ut debitis suscipit.', 'read', '2024-09-10 09:50:33', '2024-09-23 03:29:16'),
+(33, 'Harvey Robel', 'ottilie.hane@yahoo.com', 'Optio omnis iusto voluptas.', 'Corrupti quia quod excepturi commodi maiores. Fugiat et eos quibusdam totam doloribus vel. Et nihil sunt debitis reprehenderit quis. Dolores sunt qui officiis velit.', 'read', '2024-09-10 09:50:33', '2024-09-10 17:46:34'),
+(37, 'Tia Simonis', 'ywehner@wisoky.com', 'Est tenetur et quisquam quidem.', 'Iste veniam labore magni et architecto. Nobis dicta totam perferendis vel atque enim voluptatum. Distinctio cum et voluptas distinctio quia voluptas. Repellat porro qui dolores optio.', 'read', '2024-09-10 09:50:33', '2024-09-10 18:00:10'),
 (38, 'Prof. Gwendolyn Metz', 'barton.jacobi@gmail.com', 'Minima quia aut fuga voluptatibus dolorum.', 'Ut praesentium voluptates aut exercitationem deleniti voluptas. Corrupti ex possimus non facilis aperiam. Nam quia et est. Est modi aliquid voluptatum esse veritatis ipsam id.', 'read', '2024-09-10 09:50:33', '2024-09-10 09:50:33'),
 (40, 'Tania Buckridge', 'anika59@yahoo.com', 'Aut nisi rem necessitatibus sed ea voluptatem.', 'Voluptas libero ipsam atque et consequuntur cum aperiam. Qui consequatur repellendus officiis quo nam quia. Corrupti et distinctio ut inventore consectetur numquam magni.', 'read', '2024-09-10 09:50:33', '2024-09-10 09:50:33'),
 (45, 'Dr. Quinton Jerde Jr.', 'bayer.flossie@oconner.org', 'Voluptas deleniti maxime non sed sed.', 'Odio doloremque aperiam dicta facere excepturi eos. Ullam laboriosam laudantium non omnis dolor. Rerum quis necessitatibus tempora ab vero. Quia non enim odit.', 'read', '2024-09-10 09:50:38', '2024-09-10 12:52:29'),
 (46, 'Moshe Rice PhD', 'okonopelski@schowalter.org', 'Aut explicabo nisi esse.', 'Voluptas eligendi officiis corporis aut esse. Commodi deleniti et voluptatem itaque voluptas fuga itaque. In ducimus et aut asperiores consequatur tempore repellendus. Dolores cupiditate veritatis non inventore.', 'read', '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
-(47, 'Marian Kunde Sr.', 'wziemann@hammes.info', 'Dicta placeat rerum aut exercitationem ut dignissimos.', 'Mollitia autem nulla ut. Dolores explicabo sequi amet magnam maiores enim. Iste sequi aut voluptas doloribus repellat at quo ratione. Id voluptates modi culpa distinctio sequi.', 'unread', '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
-(49, 'Ashtyn Labadie', 'newell88@hotmail.com', 'Quod reiciendis vero aperiam corporis perferendis sit soluta.', 'Maxime sed voluptatibus consectetur omnis dolores. Sint quasi qui ut porro dignissimos debitis et cupiditate. Blanditiis et ut perspiciatis est omnis. Cum ut perferendis nisi deleniti sit eius.', 'unread', '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
-(50, 'Earl Bartell', 'amina51@yahoo.com', 'Ea doloribus excepturi necessitatibus maiores fuga.', 'Facere non ullam qui fuga nulla delectus enim. Expedita nihil voluptatem et autem recusandae eaque natus. Quaerat modi sapiente consectetur quis. Veniam ducimus occaecati culpa ullam corrupti enim molestiae.', 'read', '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
+(47, 'Marian Kunde Sr.', 'wziemann@hammes.info', 'Dicta placeat rerum aut exercitationem ut dignissimos.', 'Mollitia autem nulla ut. Dolores explicabo sequi amet magnam maiores enim. Iste sequi aut voluptas doloribus repellat at quo ratione. Id voluptates modi culpa distinctio sequi.', 'read', '2024-09-10 09:50:38', '2024-09-11 06:19:03'),
+(49, 'Ashtyn Labadie', 'newell88@hotmail.com', 'Quod reiciendis vero aperiam corporis perferendis sit soluta.', 'Maxime sed voluptatibus consectetur omnis dolores. Sint quasi qui ut porro dignissimos debitis et cupiditate. Blanditiis et ut perspiciatis est omnis. Cum ut perferendis nisi deleniti sit eius.', 'read', '2024-09-10 09:50:38', '2024-09-12 17:14:43'),
+(50, 'Earl Bartell', 'amina51@yahoo.com', 'Ea doloribus excepturi necessitatibus maiores fuga.', 'Facere non ullam qui fuga nulla delectus enim. Expedita nihil voluptatem et autem recusandae eaque natus. Quaerat modi sapiente consectetur quis. Veniam ducimus occaecati culpa ullam corrupti enim molestiae.', 'read', '2024-09-10 09:50:38', '2024-09-20 10:53:55'),
 (51, 'Laurine Bahringer', 'jamir16@gerlach.org', 'Praesentium aut modi veniam sed sapiente aut est.', 'Voluptas soluta temporibus in dolorum dolore. Quo ipsam voluptatem voluptate rerum perspiciatis in. Sit animi nostrum voluptas voluptas sit. Qui quos eligendi quas dolor cupiditate non est provident.', 'unread', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (52, 'Katelyn Heaney', 'hmarquardt@balistreri.net', 'Nam voluptas eaque sed dolorum officia sed.', 'Culpa quia harum id aut enim sunt. Voluptas quaerat unde modi sint labore.', 'read', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (53, 'Ena Kulas', 'elyssa98@yahoo.com', 'Cupiditate inventore alias officiis praesentium.', 'Dolorem enim aut harum tenetur sapiente. Sit rerum vero et. Rerum explicabo nisi quia et.', 'read', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (54, 'Ms. Keely Sporer Jr.', 'kgusikowski@bechtelar.com', 'Nobis repellat unde earum quis hic nesciunt.', 'Esse amet est eos impedit doloribus. Minus atque possimus magnam ut et. Maxime non non enim sit id.', 'read', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (55, 'Talia Barrows', 'allison92@walker.com', 'Voluptate ad praesentium qui suscipit ipsa.', 'Culpa consequuntur dolor necessitatibus qui. Iure ipsa officiis consequatur quia laborum. Odit distinctio ea aperiam omnis aut commodi dignissimos. Dolorem nemo cum est asperiores harum et quis.', 'read', '2024-09-10 09:50:44', '2024-09-10 09:50:44'),
-(57, 'Prof. Rogelio Turcotte', 'wisozk.winona@gmail.com', 'Qui sed illum quo sunt qui suscipit id.', 'Hic sit neque placeat iste at cupiditate. Ratione eos cumque itaque quisquam et aliquid a. Alias itaque maxime voluptatem est. At tenetur saepe numquam necessitatibus.', 'read', '2024-09-10 09:50:44', '2024-09-10 09:50:44'),
-(58, 'Joseph Wolf', 'rohan.darrell@rolfson.com', 'Eveniet minima quis aliquid nulla illum inventore.', 'Ut ea dignissimos vero a voluptatem eius ut. Est est hic et facilis magni. Pariatur officiis nulla reprehenderit repudiandae nostrum. Facere pariatur hic et aut provident delectus.', 'read', '2024-09-10 09:50:44', '2024-09-10 09:50:44');
+(57, 'Prof. Rogelio Turcotte', 'wisozk.winona@gmail.com', 'Qui sed illum quo sunt qui suscipit id.', 'Hic sit neque placeat iste at cupiditate. Ratione eos cumque itaque quisquam et aliquid a. Alias itaque maxime voluptatem est. At tenetur saepe numquam necessitatibus.', 'read', '2024-09-10 09:50:44', '2024-09-23 03:27:49'),
+(61, 'omima', 'omima.moursi@gmail.com', 'hello dear', 'i need to see you ASA', 'read', '2024-09-10 18:27:54', '2024-09-10 18:30:00'),
+(62, '4444444444', 'rashasaber19@gmail.com', '44444444444', '44444444444444444444444444444444444444444444444444444', 'unread', '2024-09-12 17:24:22', '2024-09-12 17:24:22'),
+(63, '9999999999999', 'SHsaber19@gmail.com', '9999999999999', '999999999999999999999999999999999', 'read', '2024-09-17 17:55:59', '2024-09-20 10:49:17'),
+(64, '22222222222', '222saber19@gmail.com', '22222222222', '22222222222222222222222222222222222222222222222', 'unread', '2024-09-23 03:37:54', '2024-09-23 03:37:54');
 
 -- --------------------------------------------------------
 
@@ -293,7 +292,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('GmIZjKCnmTu8BO7fqUHVxCVY044cWPuRaNZ3O3gx', 7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Avast/127.0.0.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiQXZ4RUxqR1hHRWxZaUlWMjh0eG1uNVdWamFZd1NLVzBtemFpUFBvUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC90b3BpY3MiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo3O3M6NDoiYXV0aCI7YToxOntzOjIxOiJwYXNzd29yZF9jb25maXJtZWRfYXQiO2k6MTcyNTk4NDU3NDt9czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyODoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3RvcGljcyI7fX0=', 1725984778);
+('rvNHRgMT75GfDABS3XV6TBtpoi8q00zlj7BfnhrH', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Avast/128.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoibmhXRGkwU29jU3VpNUpXQ09QRnVtcGN4V3drR0VsemNCVmtrMFdQTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9yZWdpc3RlciI7fXM6MzoidXJsIjthOjE6e3M6ODoiaW50ZW5kZWQiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ob21lIjt9fQ==', 1727074008);
 
 -- --------------------------------------------------------
 
@@ -316,9 +315,6 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `name`, `content`, `published`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Dr. Jettie Weber', 'Et quo officiis ut itaque tempore minima sed. Architecto omnis rem aperiam quisquam quos. Earum vel tempore voluptates et quod odit dolorum aut.', 0, '1725408428.jpg', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
-(2, 'Dr. Erik Rosenbaum DVM', 'Rerum molestiae qui eos aspernatur alias adipisci et. Vel non eum sit libero officia aut distinctio.', 0, '1725408124.png', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
-(3, 'Leonor Block', 'Sit rerum magni blanditiis blanditiis quos. Enim facere et dolore voluptate quisquam eligendi sed.', 0, '1725918170.png', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
 (4, 'Rollin Braun', 'A numquam eius voluptatem mollitia commodi. Harum assumenda nam iure quasi perferendis sequi voluptas. Quia hic aut adipisci veniam. Laudantium nulla ex magnam animi nostrum asperiores veniam sit.', 1, '1725966034.png', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
 (5, 'Asia Kulas', 'Tempore sit reiciendis nulla nihil voluptas sint quia. Cum quas rerum officia consectetur. Sed veniam et dolorem consequatur similique. Et officia sapiente earum sunt.', 0, '1725408428.jpg', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
 (6, 'Murray Zulauf PhD', 'Ea deleniti cumque illo dolor minus amet. Est qui sunt nihil illo. Nemo incidunt et est eligendi.', 0, '1725966280.png', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
@@ -328,7 +324,6 @@ INSERT INTO `testimonials` (`id`, `name`, `content`, `published`, `image`, `crea
 (10, 'Brayan Rodriguez', 'Cumque consequuntur qui consequuntur consectetur voluptatem dolorem dolores. Ullam fugiat itaque expedita ipsa quisquam. In delectus molestiae ipsa quis. Alias quod impedit dicta corrupti quod.', 1, '1725408105.jpg', '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
 (11, 'Miss Adelle Lang III', 'A quae molestiae consequatur ad ducimus et debitis. Sed voluptates harum est est corporis aut. Nam distinctio deserunt eveniet et sunt nostrum modi voluptatem.', 0, '1725965658.png', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (12, 'Cortez Wisozk', 'Expedita earum reiciendis nihil eum excepturi aut. Est ut voluptatum autem aspernatur velit facere. Facere soluta quasi aut sed et cupiditate. Omnis omnis nesciunt enim ut.', 1, '1725965801.png', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(13, 'Lydia Koelpin', 'Ad quia alias velit sit provident dolore harum. Doloribus minus est rem et. Eum nam cum consequatur ea commodi in voluptatibus. Repudiandae et iure a tenetur eveniet aut.', 0, '1725408137.png', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (14, 'Mr. Colten Abshire', 'Rem delectus accusamus minus perferendis. Ad consequatur aut beatae unde. Qui distinctio et illum sed praesentium.', 0, '1725890001.png', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (15, 'Werner Kling', 'Nesciunt qui perferendis assumenda tenetur aut sint dicta. Eaque ratione voluptas sint consectetur tenetur in.', 0, '1725640493.jpg', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (16, 'Marcella Swaniawski', 'Qui vitae eaque minus ut incidunt qui suscipit id. Occaecati qui quis provident. Illo voluptatem odio odio ex dolorem. Sapiente inventore nihil nisi magnam libero autem.', 0, '1725889953.png', '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
@@ -375,7 +370,10 @@ INSERT INTO `testimonials` (`id`, `name`, `content`, `published`, `image`, `crea
 (57, 'Dr. Nicholas Barrows', 'Est optio quaerat quo. Quae enim totam dolorem impedit exercitationem. Consectetur quis velit ratione ut nisi cupiditate. Sapiente quasi et dolores modi.', 0, '1725966184.png', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (58, 'Trevor Cole', 'Dolor cum veritatis animi consequuntur optio totam. Eos voluptatum et dolor rerum. Qui hic earum consequuntur sequi. Facere sunt ipsam sed.', 0, '1725965895.png', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
 (59, 'Oren Kutch Jr.', 'Nam aspernatur nesciunt qui magni fuga. Aut et nemo mollitia sequi non accusantium iure. Illo repellendus commodi illo voluptates.', 0, '1725640438.jpg', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
-(60, 'Adele Tromp Jr.', 'Velit est et fugit accusantium ut et. Sapiente nobis eum quisquam dicta officiis dolorem est. Excepturi sunt maiores dolore nihil.', 0, '1725889906.png', '2024-09-10 09:50:43', '2024-09-10 09:50:43');
+(60, 'Adele Tromp Jr.', 'Velit est et fugit accusantium ut et. Sapiente nobis eum quisquam dicta officiis dolorem est. Excepturi sunt maiores dolore nihil.', 0, '1725889906.png', '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
+(61, 'big', '7777777777777777777777777777777777777666666666666', 1, '1726003248.jpg', '2024-09-10 18:20:22', '2024-09-10 18:20:48'),
+(62, 'rasha', 'sdssdf', 1, '1726171316.png', '2024-09-12 17:01:56', '2024-09-12 17:01:56'),
+(63, '1111111111111111111111111', '1111111111111111111111111111111', 0, '1726171676.jpg', '2024-09-12 17:07:36', '2024-09-12 17:07:56');
 
 -- --------------------------------------------------------
 
@@ -403,57 +401,47 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `title`, `content`, `views`, `badge_count`, `published`, `trending`, `image`, `category_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'in', 'Nobis omnis ut in et in omnis. Possimus maxime adipisci omnis corporis a aut voluptates. Dolorem voluptatem vero consequatur et saepe quidem repudiandae.', 84, 59, 0, 1, '1725963682.jpg', 9, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
-(2, 'officiis', 'Sequi sequi aut exercitationem. Soluta sint rem voluptatem id eos. Soluta eum deserunt soluta sint dolor libero molestiae eum. Iste tempora in odio in odio magnam in. Officia nisi eos harum et.', 3, 25, 0, 0, '1725902892.png', 7, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
-(3, 'officiis', 'Et ipsum laudantium et minima. Ut neque sed deleniti nostrum enim corrupti rerum soluta. Et harum veritatis voluptatum sunt iure. Laboriosam accusantium odit eum rerum atque ea consequatur.', 106, 63, 1, 1, '1725915231.png', 9, NULL, '2024-09-10 09:50:04', '2024-09-10 13:04:41'),
-(4, 'esse', 'Autem necessitatibus non dolorem quia qui hic. A quia rerum voluptatibus ab magni et est ut.', 85, 92, 1, 0, '1725900700.png', 3, NULL, '2024-09-10 09:50:04', '2024-09-10 12:55:34'),
-(5, 'recusandae', 'Excepturi consequatur sint iste error non quia accusantium sint. Dicta quis asperiores enim repellendus quisquam repellat. Sit harum laboriosam distinctio omnis. Ipsa qui enim asperiores et.', 59, 74, 1, 1, '1725966954.png', 6, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
+(2, 'officiis4444444444444444', 'Sequi sequi aut exercitationem. Soluta sint rem voluptatem id eos. Soluta eum deserunt soluta sint dolor libero molestiae eum. Iste tempora in odio in odio magnam in. Officia nisi eos harum et.4444444444444444444444', 0, 25, 0, 1, '1726442876.jpg', 51, NULL, '2024-09-10 09:50:04', '2024-09-15 20:27:56'),
+(3, 'officiis', 'Et ipsum laudantium et minima. Ut neque sed deleniti nostrum enim corrupti rerum soluta. Et harum veritatis voluptatum sunt iure. Laboriosam accusantium odit eum rerum atque ea consequatur.', 182, 63, 1, 1, '1725915231.png', 9, '2024-09-12 17:14:15', '2024-09-10 09:50:04', '2024-09-23 03:31:36'),
+(5, 'recusandae', 'Excepturi consequatur sint iste error non quia accusantium sint. Dicta quis asperiores enim repellendus quisquam repellat. Sit harum laboriosam distinctio omnis. Ipsa qui enim asperiores et.', 63, 74, 1, 1, '1725966954.png', 6, NULL, '2024-09-10 09:50:04', '2024-09-12 17:22:07'),
 (7, 'quos', 'Non velit qui voluptatem accusamus excepturi voluptatum. Sit excepturi excepturi quam ullam. Accusamus ratione eligendi qui et porro sed.', 53, 70, 0, 0, '1725903688.png', 10, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
 (8, 'temporibus', 'Soluta quaerat quae sed. Aspernatur recusandae qui reiciendis voluptatem natus. Incidunt voluptatum ut tempore et repudiandae laborum. Et aut voluptates laboriosam asperiores esse voluptatem.', 12, 29, 1, 1, '1725915741.png', 8, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
-(9, 'veritatis', 'Quo quasi numquam eos explicabo mollitia at. Qui qui qui ipsum nisi. Ut laudantium sint amet officia neque est.', 72, 14, 1, 0, '1725385283.jpg', 4, NULL, '2024-09-10 09:50:04', '2024-09-10 09:50:04'),
+(9, 'veritatis', 'Quo quasi numquam eos explicabo mollitia at. Qui qui qui ipsum nisi. Ut laudantium sint amet officia neque est.', 111, 14, 1, 0, '1725385283.jpg', 4, NULL, '2024-09-10 09:50:04', '2024-09-23 03:33:47'),
 (11, 'sunt', 'Est molestias animi fuga sit. Et et dolorem ipsum consectetur et nesciunt ad. Iusto suscipit facilis quisquam recusandae ipsa magni earum. Pariatur repellat aut rem consequatur.', 19, 89, 1, 1, '1725902963.png', 7, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(12, 'ut', 'Doloremque iste et quam dolor. Placeat eveniet qui error maxime voluptatem illum. Porro ut recusandae quaerat accusamus consequatur et corporis quaerat.', 23, 76, 0, 0, '1725915231.png', 7, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(13, 'qui', 'Fugit reiciendis consectetur autem pariatur quidem. Voluptatibus et recusandae eius. Excepturi tempore et nisi qui qui sint nihil quibusdam. Numquam quis voluptatum qui accusantium qui.', 42, 12, 1, 0, '1725902917.png', 6, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(15, 'quisquam', 'Aut nihil non autem maiores qui veniam sit. Atque et itaque similique id in est. Molestias exercitationem omnis velit sequi tempore velit dolores dolorem.', 13, 0, 0, 1, '1725966917.png', 7, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(16, 'eum', 'Quos molestias id quo quos enim qui. Ut eius eos in id sit dicta. Error nisi non odit dolorem nihil recusandae omnis qui.', 79, 98, 0, 1, '1725966981.jpg', 6, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
+(12, 'AAA', 'Doloremque iste et quam dolor. Placeat eveniet qui error maxime voluptatem illum. Porro ut recusandae quaerat accusamus consequatur et corporis quaerat.', 0, 76, 1, 0, '1727072190.jpg', 28, NULL, '2024-09-10 09:50:22', '2024-09-23 03:16:30'),
+(13, 'qui', 'Fugit reiciendis consectetur autem pariatur quidem. Voluptatibus et recusandae eius. Excepturi tempore et nisi qui qui sint nihil quibusdam. Numquam quis voluptatum qui accusantium qui.', 44, 12, 1, 0, '1725902917.png', 6, NULL, '2024-09-10 09:50:22', '2024-09-23 03:36:11'),
+(15, 'quisquam', 'Aut nihil non autem maiores qui veniam sit. Atque et itaque similique id in est. Molestias exercitationem omnis velit sequi tempore velit dolores dolorem.', 20, 0, 0, 1, '1725966917.png', 7, NULL, '2024-09-10 09:50:22', '2024-09-12 17:22:35'),
+(16, 'eum', 'Quos molestias id quo quos enim qui. Ut eius eos in id sit dicta. Error nisi non odit dolorem nihil recusandae omnis qui.', 80, 98, 0, 1, '1725966981.jpg', 6, NULL, '2024-09-10 09:50:22', '2024-09-12 17:22:12'),
 (18, 'est', 'Veritatis eum velit sint est. Ducimus quia et et in. Non aliquid blanditiis quos et aliquid. Quaerat velit animi voluptatem eos.', 69, 48, 0, 1, '1725796383.png', 6, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
-(19, 'dignissimos', 'Et omnis sit labore consequatur deleniti tempora quia. Aut earum dolore dicta consequuntur ipsum autem. Voluptatum fugit inventore repudiandae officiis modi et laborum.', 85, 17, 1, 1, '1725796517.png', 5, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (20, 'quidem', 'Eos neque eum quod. Vitae non corporis magnam eos sint quod quas. Facere amet labore alias similique veniam qui corporis. Odit fugiat ea adipisci facere ducimus id maiores aliquam. Quia quod et et.', 48, 90, 0, 1, '1725917016.png', 10, NULL, '2024-09-10 09:50:22', '2024-09-10 09:50:22'),
 (21, 'quis', 'Eveniet ea amet natus corporis non beatae ad. Possimus ut beatae temporibus dicta adipisci porro illo. Qui exercitationem neque excepturi ipsa.', 87, 43, 0, 1, '1725915741.png', 9, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
-(22, 'aut', 'Nihil impedit dolorem aut similique minima. Inventore unde debitis delectus vero cum. Eos sit nemo accusamus dolores.', 90, 78, 1, 1, '1725915250.png', 4, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
-(23, 'nihil', 'Accusantium voluptas aspernatur omnis aut commodi sapiente quam est. Et voluptas ea quibusdam omnis eligendi. Autem quidem enim sint et molestiae. Et consequuntur laboriosam est totam.', 80, 17, 1, 0, '1725915741.png', 8, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
-(24, 'voluptatem', 'Necessitatibus quo necessitatibus aut iure error. Consequatur ut ducimus illo amet et. Consequatur autem sed consectetur error. Aperiam asperiores voluptatem quos minus.', 11, 74, 0, 1, '1725901150.png', 4, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
-(25, 'aliquid', 'Consequuntur magni sunt ea officia enim omnis accusamus. Labore rerum ex nesciunt voluptas ut magnam. Vitae facere optio aut sint ut.', 10, 68, 0, 1, '1725916216.jpg', 9, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
+(22, 'aut', 'Nihil impedit dolorem aut similique minima. Inventore unde debitis delectus vero cum. Eos sit nemo accusamus dolores.', 123, 78, 1, 1, '1725915250.png', 4, NULL, '2024-09-10 09:50:27', '2024-09-17 18:24:29'),
+(23, 'nihil', 'Accusantium voluptas aspernatur omnis aut commodi sapiente quam est. Et voluptas ea quibusdam omnis eligendi. Autem quidem enim sint et molestiae. Et consequuntur laboriosam est totam.', 89, 17, 1, 0, '1725915741.png', 8, NULL, '2024-09-10 09:50:27', '2024-09-23 03:36:26'),
+(24, 'voluptatem', 'Necessitatibus quo necessitatibus aut iure error. Consequatur ut ducimus illo amet et. Consequatur autem sed consectetur error. Aperiam asperiores voluptatem quos minus.', 32, 74, 0, 1, '1725901150.png', 4, NULL, '2024-09-10 09:50:27', '2024-09-23 03:36:19'),
+(25, 'aliquid', 'Consequuntur magni sunt ea officia enim omnis accusamus. Labore rerum ex nesciunt voluptas ut magnam. Vitae facere optio aut sint ut.', 19, 68, 0, 1, '1725916216.jpg', 9, NULL, '2024-09-10 09:50:27', '2024-09-12 17:23:22'),
 (26, 'quasi', 'Similique et sit recusandae inventore ducimus. Omnis molestiae quo nobis. Et quibusdam commodi et id deleniti corrupti. Perspiciatis consequatur voluptas omnis tempora fugit molestiae libero.', 55, 31, 1, 1, '1725963566.png', 6, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
 (27, 'nihil', 'Possimus maiores quod velit modi. Non non mollitia qui a vel vel. Nostrum ratione consequuntur ut magni et maiores. Cupiditate fugit qui architecto doloremque reprehenderit.', 41, 14, 0, 1, '1725796383.png', 4, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
 (28, 'ut', 'Vel repellendus non voluptatem ut veniam. Eum atque quia et assumenda accusantium consequatur praesentium. Quia est est optio provident ea eum non.', 7, 35, 1, 0, '1725966917.png', 6, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
-(29, 'facilis', 'Ut et sequi eos veritatis cumque. Voluptas exercitationem pariatur aut voluptates optio sequi animi ipsam. Et reiciendis voluptate mollitia sed velit perspiciatis.', 77, 99, 0, 0, '1725966981.jpg', 3, NULL, '2024-09-10 09:50:27', '2024-09-10 12:55:02'),
-(30, 'est', 'Eos rem aut laborum quae ipsam quidem nihil occaecati. Inventore necessitatibus quas molestiae rerum. Tempora repudiandae maxime natus velit sit debitis quos.', 73, 0, 0, 1, '1725963682.jpg', 9, NULL, '2024-09-10 09:50:27', '2024-09-10 09:50:27'),
+(30, 'est', 'Eos rem aut laborum quae ipsam quidem nihil occaecati. Inventore necessitatibus quas molestiae rerum. Tempora repudiandae maxime natus velit sit debitis quos.', 78, 0, 0, 1, '1725963682.jpg', 9, NULL, '2024-09-10 09:50:27', '2024-09-12 17:23:10'),
 (31, 'ex', 'Consequuntur vero nam et incidunt sit et. Qui suscipit optio sit earum consequatur. Aut cum qui dolor ullam incidunt.', 86, 64, 1, 0, '1725966935.png', 4, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
 (32, 'voluptatibus', 'Mollitia iusto at aut voluptatum in maiores. Debitis et eum minima architecto provident architecto. Repellat ratione distinctio sed adipisci quo enim inventore vitae. Eum quae impedit ut.', 7, 26, 1, 1, 'colleagues-working-cozy-office-medium-shot.png', 7, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
 (34, 'neque', 'Reprehenderit odit dolorem voluptatem magni. Non necessitatibus dolor quam et. Nulla sunt omnis aliquid accusantium.', 0, 54, 1, 0, '1725902917.png', 10, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
 (35, 'voluptatum', 'Ut est impedit ut debitis rerum a. Ratione placeat minima quia. Dicta earum quos laboriosam blanditiis reprehenderit quo.', 34, 1, 0, 1, '1725901150.png', 6, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
 (36, 'voluptatem', 'Dolor possimus dolorum eos voluptas odio alias. Quisquam ea non quae animi id cumque reiciendis. Harum saepe qui consequatur cum. Cupiditate eum error et vitae veniam facilis.', 24, 76, 0, 1, '1725915269.jpg', 7, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
-(37, 'autem', 'Quam consequatur repellendus corrupti illo. Eligendi voluptas nisi voluptatem quasi. Quae dolores enim ab non aut. Aut iure molestiae quo quo omnis id enim.', 34, 7, 1, 1, '1725915568.png', 3, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
-(38, 'omnis', 'Voluptate aspernatur ut cupiditate est natus dolorem autem. Veritatis est qui officia eos cum tempore enim. Ut quo consequatur dolores perspiciatis sit qui.', 96, 12, 1, 1, '1725796383.png', 9, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
-(39, 'facere', 'Ut sed vel commodi perspiciatis et eaque eveniet. Reprehenderit doloremque enim iusto. Cupiditate et alias consequatur laudantium accusamus. Reprehenderit est laboriosam earum quia dolor.', 41, 66, 1, 1, '1725902963.png', 5, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
-(40, 'ea', 'Tenetur tempore autem qui corrupti reprehenderit. Eius quidem tempora rerum aliquam. Dolore harum quo expedita soluta repellendus. Qui aut eum libero id impedit quas earum.', 77, 6, 1, 1, '1725902979.png', 9, NULL, '2024-09-10 09:50:32', '2024-09-10 09:50:32'),
+(38, 'omnis', 'Voluptate aspernatur ut cupiditate est natus dolorem autem. Veritatis est qui officia eos cum tempore enim. Ut quo consequatur dolores perspiciatis sit qui.', 158, 12, 1, 1, '1725796383.png', 9, NULL, '2024-09-10 09:50:32', '2024-09-23 03:30:50'),
 (41, 'asperiores', 'Autem ut repudiandae omnis error nihil. Eos aut accusamus non nihil. Harum optio consectetur sint et in repudiandae.', 34, 83, 0, 0, '1725966981.jpg', 6, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
 (42, 'et', 'Assumenda distinctio deserunt dignissimos consectetur pariatur omnis quibusdam. Ea consectetur voluptate aut.', 88, 29, 0, 1, '1725796433.jpg', 6, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
-(43, 'quisquam', 'Similique aliquam velit sed. Perspiciatis dolorem dicta dolores officiis doloribus voluptatem rem. Porro earum quidem quos in. Officiis explicabo fugiat quisquam nostrum sit animi.', 61, 55, 0, 0, '1725796517.png', 5, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
 (44, 'quia', 'Aliquam dolorem nisi nostrum sunt adipisci. Ad numquam laboriosam omnis at placeat ipsam ipsam. Nisi assumenda voluptas et adipisci. Excepturi quo officiis nihil explicabo.', 39, 86, 1, 0, '1725902941.png', 7, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
-(45, 'reiciendis', 'Debitis voluptatem enim quibusdam quae qui placeat facilis. Vero voluptatem ut dolor ratione sint. Omnis voluptatem rerum modi excepturi. Beatae eos dolorem qui blanditiis consectetur.', 94, 33, 1, 1, '1725385239.jpg', 7, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
+(45, 'reiciendis', 'Debitis voluptatem enim quibusdam quae qui placeat facilis. Vero voluptatem ut dolor ratione sint. Omnis voluptatem rerum modi excepturi. Beatae eos dolorem qui blanditiis consectetur.', 133, 33, 1, 1, '1725385239.jpg', 7, NULL, '2024-09-10 09:50:37', '2024-09-17 18:08:23'),
 (47, 'error', 'Itaque quia culpa distinctio dolorem quia. Dolorum perferendis voluptatem reiciendis ut voluptatem facilis atque.', 55, 70, 1, 0, '1725901150.png', 9, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
 (48, 'qui', 'Non beatae quo est tenetur vitae ad. Velit vel quidem vel reiciendis. Rem rerum deserunt dolorem libero corporis molestiae hic. Sint omnis eveniet ab minima. Dicta omnis quidem optio dolor sed.', 27, 80, 0, 1, '1725902941.png', 10, NULL, '2024-09-10 09:50:37', '2024-09-10 09:50:37'),
 (49, 'modi', 'Eius accusamus vitae a dicta ea nihil. Qui similique libero corrupti quia aliquid. Consequatur est officiis consectetur dolor veritatis.', 47, 55, 0, 0, '1725902979.png', 10, NULL, '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
-(50, 'excepturi', 'Porro quia fuga voluptas consequuntur accusantium et architecto. Praesentium cumque et nostrum est fugiat expedita harum. Deleniti ad sint non excepturi nostrum inventore.', 23, 16, 1, 1, '1725796433.jpg', 3, NULL, '2024-09-10 09:50:38', '2024-09-10 09:50:38'),
-(51, 'architecto', 'Voluptas aut tempore aspernatur alias consequuntur eveniet fugiat. Temporibus odit aperiam sit quo fuga ut dolorem cumque. Et ut doloribus velit nihil quisquam.', 40, 33, 1, 0, '1725796383.png', 8, NULL, '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
-(52, 'quia', 'Qui impedit nemo qui est nam quos distinctio. Omnis et velit odio autem et harum placeat sequi. Ea et quia sed modi. Nihil praesentium mollitia ea quos.', 74, 17, 0, 1, '1725796517.png', 5, NULL, '2024-09-10 09:50:42', '2024-09-10 09:50:42'),
-(53, 'architecto', 'Eveniet commodi nihil cupiditate asperiores. Quam pariatur dolore quia voluptatem dolorum. Aperiam impedit esse excepturi. Omnis magni pariatur est mollitia.', 0, 75, 0, 1, '1725915568.png', 9, NULL, '2024-09-10 09:50:43', '2024-09-10 09:50:43'),
+(51, 'architecto', 'Voluptas aut tempore aspernatur alias consequuntur eveniet fugiat. Temporibus odit aperiam sit quo fuga ut dolorem cumque. Et ut doloribus velit nihil quisquam.', 46, 33, 1, 0, '1725796383.png', 8, NULL, '2024-09-10 09:50:42', '2024-09-23 03:36:32'),
+(53, 'architecto', 'Eveniet commodi nihil cupiditate asperiores. Quam pariatur dolore quia voluptatem dolorum. Aperiam impedit esse excepturi. Omnis magni pariatur est mollitia.', 10, 75, 0, 1, '1725915568.png', 9, NULL, '2024-09-10 09:50:43', '2024-09-23 03:41:53'),
 (56, 'perspiciatis', 'Aut quas rerum aliquid dolorem aperiam. Veniam veritatis animi delectus est nesciunt dolores. Iste iure aut enim consequatur autem odio.', 23, 48, 0, 1, '1725966935.png', 8, NULL, '2024-09-10 09:50:43', '2024-09-10 12:56:19'),
-(57, 'vitae', 'Facere et et et incidunt sequi excepturi alias. Numquam voluptates modi quasi vel voluptatem. Commodi dolorem consequatur et hic dolor omnis. Quia qui maiores quam illum.', 33, 48, 1, 1, '1725916216.jpg', 8, NULL, '2024-09-10 09:50:43', '2024-09-10 12:56:35'),
-(58, '0000000000000000000000', 'Beatae cupiditate qui incidunt et saepe aperiam. Dolor consequatur necessitatibus a sapiente. Eos nemo quia neque ut voluptas tenetur. Aspernatur labore est et numquam consequatur placeat.', 0, 32, 1, 1, '1725984760.png', 4, NULL, '2024-09-10 09:50:43', '2024-09-10 13:12:40'),
-(60, '111111111111111111111', 'Quia voluptas iste distinctio pariatur deserunt consectetur. Ratione nihil possimus reiciendis. Sed et et dicta dolorem maxime. Molestiae aut ut repellendus odit ut voluptates enim.', 0, 19, 1, 1, '1725984724.png', 9, NULL, '2024-09-10 09:50:43', '2024-09-10 13:12:04');
+(57, 'vitae', 'Facere et et et incidunt sequi excepturi alias. Numquam voluptates modi quasi vel voluptatem. Commodi dolorem consequatur et hic dolor omnis. Quia qui maiores quam illum.', 61, 48, 1, 1, '1725916216.jpg', 8, NULL, '2024-09-10 09:50:43', '2024-09-23 03:42:34'),
+(60, '111111111111111111111', 'Quia voluptas iste distinctio pariatur deserunt consectetur. Ratione nihil possimus reiciendis. Sed et et dicta dolorem maxime. Molestiae aut ut repellendus odit ut voluptates enim.', 0, 19, 1, 1, '1725984724.png', 9, NULL, '2024-09-10 09:50:43', '2024-09-10 13:12:04'),
+(61, 'dance', 'test', 31, 0, 1, 1, '1726002888.png', 16, NULL, '2024-09-10 18:14:48', '2024-09-23 03:43:32');
 
 -- --------------------------------------------------------
 
@@ -480,8 +468,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `email_verified_at`, `password`, `active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(7, 'rasha', 'saber', 'RashaSaber', 'rashsaber19@gmail.com', '2024-09-10 13:10:53', '$2y$12$ezJ.UQuugK1Ke5V9ehw3qe3FXV7ybBDZsRPRdCSvRqV/nQ9IR81.e', 1, NULL, '2024-09-10 11:12:19', '2024-09-10 13:10:53'),
-(8, 'ahmed', 'saber', 'Ahmed23_90', 'Ahmed23_90@gmail.com', NULL, '$2y$12$BMQ6sN4Upkt.GSKa2kJe5udUHGGI234yJxQWZ6um3pxOjU3fcA17q', 1, NULL, '2024-09-10 13:07:53', '2024-09-10 13:07:53');
+(7, 'rasha', 'saber', 'RashaSaber', 'rashsfaber19@gmail.com', '2024-09-10 13:10:53', '$2y$12$6LKiLMI6i11FYo65iHH7j.AdtM25yODDbccL0prh7odlUqvJh34a2', 1, NULL, '2024-09-10 11:12:19', '2024-09-10 18:49:30'),
+(9, 'rasha', 'saer', 'R_S', 'rashasaber19@gmail.com', '2024-09-10 16:29:02', '$2y$12$VXBdnqMh9a7Bw9q0jmMsqei3fGIFTEGf.Dx29Pv9RGoJUaP/HybjC', 1, NULL, '2024-09-10 16:26:34', '2024-09-10 16:29:02'),
+(11, 'Mimaa155', 'moursi155', 'lozaa1155', 'mi5maa955@gmail.com', '2024-09-10 18:11:35', '$2y$12$wpZJbPeuXUeZ8Owxprq/duo8iE2Xrc7TRKU9hfeKuVdaKEHZXn4be', 1, NULL, '2024-09-10 18:11:35', '2024-09-17 18:16:38'),
+(13, 'ssssssssss', 'ssss', 'ssssssss', 'ssshsaber19@gmail.com', '2024-09-12 17:13:07', '$2y$12$PVlJQoHmG0ugseWlyyRskO/DTlL7B2I9c79CSyyGmNxWydvzm4ZVK', 1, NULL, '2024-09-12 17:13:07', '2024-09-12 17:13:07');
 
 --
 -- Indexes for dumped tables
@@ -581,7 +571,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -599,7 +589,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -611,19 +601,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
