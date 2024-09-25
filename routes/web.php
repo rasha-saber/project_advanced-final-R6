@@ -74,8 +74,6 @@ Route::get('/{id}', [testimonialsController::class, 'show'])->name('testimonials
 Route::get('/{id}/edit', [testimonialsController::class, 'edit'])->name('testimonials.edit');
 Route::put('/{id}', [testimonialsController::class, 'update'])->name('testimonials.update');
 Route::delete('/{id}', [testimonialsController::class, 'destroy'])->name('testimonials.destroy');
-// Route::patch('/{id}/restore', [testimonialsController::class, 'restore'])->name('testimonials.restore')->middleware('verified');
-// Route::delete('/{id}/forcedelete', [testimonialsController::class, 'forceDelete'])->name('testimonials.forcedelete')->middleware('verified');
 });
 
 
